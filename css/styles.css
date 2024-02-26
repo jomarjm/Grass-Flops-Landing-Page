@@ -3,6 +3,10 @@
     --nav-bar-color: white;
     --main-page-color1: #a9f3a9;
     --main-page-color2: #47da47;
+    --button-background-color: #96e796;
+    --button-text-color: #008100;
+    --button-hover-color: #eaea1c;
+    --border-hover-background-color: #0a730a;
 }
 
 html {
@@ -22,7 +26,16 @@ a {
 }
 
 #nav-bar ul {
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-direction: row;
+    border-color: red;
+}
+
+#nav-bar ul li {
+    text-align: center;
 }
 
 main {
@@ -45,7 +58,7 @@ h1 a {
     font-size: 6rem;
 }
 
-h2 {
+h2, button {
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
 }
@@ -72,7 +85,7 @@ p, label, input, a {
 }
 
 #header > div > * {
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 nav a {
@@ -108,6 +121,28 @@ img {
     width: 400px;
     margin: auto;
     border-radius: 10px;
+}
+
+form > label, form > label > input {
+    display: block;
+    margin: auto;
+}
+
+button#submit {
+    display: block;
+    margin: auto;
+    background-color: var(--button-background-color);
+    font-size: 3.0rem;
+    color: var(--button-text-color);
+    border-radius: 5px;
+    border: 2px var(--button-text-color) solid;
+    padding: 4px;
+}
+
+button#submit:hover {
+    border-color: var(--button-hover-color);
+    color: var(--button-hover-color);
+    background-color: var(--border-hover-background-color);
 }
 
 @media only screen and (max-width: 500px) {
