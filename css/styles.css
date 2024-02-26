@@ -1,0 +1,147 @@
+/* for variables */
+:root {
+    --nav-bar-color: white;
+    --main-page-color1: #a9f3a9;
+    --main-page-color2: #47da47;
+}
+
+html {
+    font-size: 10px;
+}
+
+h1 a, nav a {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav-bar {
+    width: 100%;
+}
+
+#nav-bar ul {
+    display: inline-block;
+}
+
+main {
+    background: linear-gradient(
+        45deg,
+        var(--main-page-color1),
+        var(--main-page-color2)
+    );
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 a {
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 6rem;
+}
+
+h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+}
+
+p, label, input, a {
+    font-family: "Quicksand", sans-serif;
+}
+
+.site-banner-container {
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-bar-color);
+}
+
+#header-img {
+    width: 72px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#header > div > * {
+    margin-right: 5px;
+}
+
+nav a {
+    font-size: 1.8rem;
+}
+
+.flex-position-left, .flex-position-right {
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    /* align-items: center; */
+}
+
+.flex-position-left {
+    justify-content: start;
+}
+
+.flex-position-right {
+    justify-content: end;
+}
+
+img {
+    object-fit: cover;
+    display: block;
+}
+
+.site-main-top header h2 {
+    font-size: 3rem;
+    text-align: center;
+} 
+
+#top-img {
+    width: 400px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    .flex-position-left, .flex-position-right {
+        width: 100%;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    h1 a {
+        font-size: 4.8rem;
+    }
+
+    #header-img {
+        width: 58px;
+    }
+
+    .flex-position-left, .flex-position-right {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .flex-position-left, .flex-position-right {
+        width: 100%;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    .flex-position-left, .flex-position-right {
+        justify-content: center;
+    }
+}

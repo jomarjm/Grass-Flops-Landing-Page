@@ -1,20 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GrassFlops: Grounded Everywhere You Go</title>
         <link href="css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin+Sketch:wght@400;700&family=Kelly+Slab&family=Quicksand:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     </head>
     <body>
-        <header id="header">
-            <img id="header-img" src="img/GRASSFLOPS-W.png">
-            <nav id="nav-bar">
-                <a class="nav-link"></a>
-                <a class="nav-link"></a>
-                <a class="nav-link"></a>
-            </nav>
-        </header>
+        <section class="site-banner-container">
+            <header id="header">
+                <div class="flex-position-left banner-logo">
+                    <img id="header-img" src="img/GRASSFLOPS-icon.png" alt="GrassFlops icon">
+                    <h1 id="title"><a>GrassFlops</a></h1>
+                </div>
+                <div class="flex-position-right">
+                    <nav id="nav-bar">
+                        <ul>
+                            <li></li><a class="nav-link">Features</a></li>
+                            <li><a class="nav-link">How It Works</a></li>
+                            <li><a class="nav-link">Pricing</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+        <main>
+            <section class="site-main-top">
+                <header>
+                    <h2>Made with grass right from our backyard</h2>
+                    <img id="top-img" src="img/GRASSFLOPS-W.png" alt="GrassFlops Logo">
+                </header>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <label for="email">Email 
+                        <input id="email" name="email" type="email" placeholder="Enter your email"> 
+                    </label>
+                    <button id="submit" type="submit">Get Started</button>
+                </form>
+            </section>
+            <section class="video-container">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ERDIFe8FGuk?si=AnjH_CqYRKN1Tk7m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+        </main>
     </body>
 </html>
