@@ -7,11 +7,22 @@
     --button-text-color: #008100;
     --button-hover-color: #eaea1c;
     --border-hover-background-color: #0a730a;
+    --form-background-color: #e9ffa1;
+    --discount-color: red;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 10px;
 }
+
+/* header styles */
 
 h1 a, nav a {
     color: black;
@@ -31,40 +42,11 @@ a {
     justify-content: space-evenly;
     list-style-type: none;
     flex-direction: row;
-    border-color: red;
+    /* border-color: red; */
 }
 
 #nav-bar ul li {
     text-align: center;
-}
-
-main {
-    background: linear-gradient(
-        45deg,
-        var(--main-page-color1),
-        var(--main-page-color2)
-    );
-}
-
-*, ::before, ::after {
-    box-sizing: border-box;
-    border: 1px solid black;
-    margin: 0;
-    padding: 0;
-}
-
-h1 a {
-    font-family: "Cabin Sketch", sans-serif;
-    font-size: 6rem;
-}
-
-h2, button {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-}
-
-p, label, input, a {
-    font-family: "Quicksand", sans-serif;
 }
 
 .site-banner-container {
@@ -92,6 +74,10 @@ nav a {
     font-size: 1.8rem;
 }
 
+nav a:hover {
+    color: var(--button-text-color);
+}
+
 .flex-position-left, .flex-position-right {
     display: flex;
     padding: 10px;
@@ -107,6 +93,30 @@ nav a {
     justify-content: end;
 }
 
+/* main styles */
+
+body {
+    background: linear-gradient(
+        45deg,
+        var(--main-page-color1),
+        var(--main-page-color2)
+    );
+}
+
+h1 a {
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 6rem;
+}
+
+h2, button {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+}
+
+p, label, input, a, h3, li {
+    font-family: "Quicksand", sans-serif;
+}
+
 img {
     object-fit: cover;
     display: block;
@@ -115,22 +125,60 @@ img {
 .site-main-top header h2 {
     font-size: 3rem;
     text-align: center;
+    margin: 15px auto;
 } 
 
 #top-img {
     width: 400px;
-    margin: auto;
+    margin: -5px auto 10px;
     border-radius: 10px;
 }
 
-form > label, form > label > input {
+/* form styles */
+
+#form h2 {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+#form h2 span {
+    color: var(--button-text-color);
+}
+
+#form h2 span:hover {
+    color: var(--discount-color);
+}
+
+#form {
+    width: 40%;
+    min-width: 200px;
+    max-width: 500px;
+    /* border-color: red; */
+    margin: 10px auto;
+    background-color: var(--form-background-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+label[for="email"] {
+    /* border: 1px red solid; */
     display: block;
-    margin: auto;
+    width: 50%;
+    margin: 10px auto 2px;
+    font-size: 1.4rem;
+}
+
+#form input {
+    display: block;
+    margin: 0 auto 8px;
+    width: 50%;
+    padding: 2px;
+    border-radius: 3px;
 }
 
 button#submit {
     display: block;
-    margin: auto;
+    margin: 0 auto 10px;
     background-color: var(--button-background-color);
     font-size: 3.0rem;
     color: var(--button-text-color);
@@ -144,6 +192,51 @@ button#submit:hover {
     color: var(--button-hover-color);
     background-color: var(--border-hover-background-color);
 }
+
+/* product demo and video section */
+
+.product-demo h2 {
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 3.0rem;
+}
+
+.product-demo h3 {
+    font-size: 2.0rem;
+}
+
+.product-demo {
+    /* border: 1px blue solid; */
+    padding: 15px;
+    width: 80%;
+    margin: 15px auto;
+    background-color: var(--form-background-color);
+    border-radius: 5px;
+}
+
+.product-demo article p, .product-demo li {
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+.product-demo ul {
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+/* video container */
+
+.video-container {
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    
+}
+
+#video {
+    margin: auto;
+}
+
+/* responsive features */
 
 @media only screen and (max-width: 500px) {
     .flex-position-left, .flex-position-right {
@@ -165,6 +258,14 @@ button#submit:hover {
     .flex-position-left, .flex-position-right {
         justify-content: center;
     }
+
+    .video-container {
+        width: 50vw;
+    }
+
+    #video {
+        width: 400px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -178,5 +279,13 @@ button#submit:hover {
 
     .flex-position-left, .flex-position-right {
         justify-content: center;
+    }
+
+    .video-container {
+        width: 50vw;
+    }
+
+    #video {
+        width: 300px;
     }
 }
